@@ -16,6 +16,7 @@ import java.util.Map;
 @RequestMapping("api/v1/students")
 public class StudentController {
     private StudentServiceImpl studentService;
+    // http://localhost:8081/api/v1/students/upload
     @PostMapping("/upload")
     public ResponseEntity<?> uploadStudentData(@RequestParam("file")MultipartFile file) {
         this.studentService.saveStudent(file);
